@@ -1,0 +1,150 @@
+<title>Sequência de Venda pós E-book</title>
+<style>
+  :root{
+    --teal:#0d6b62; --teal-deep:#094c46; --teal-ink:#06322e;
+    --paper:#f4f1ea; --surface:#fbfaf6; --ink:#1c2b28; --muted:#5f6f6a;
+    --line:#e2dccf; --line-strong:#d0c8b6; --gold:#b98a3c; --gold-soft:#efe4cf;
+    --wa:#128c4b; --wa-bg:#e7f6ec;
+    --shadow:0 1px 2px rgba(6,50,46,.05),0 10px 26px -14px rgba(6,50,46,.22);
+  }
+  @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+    --teal:#46c4b2; --teal-deep:#2fa593; --teal-ink:#d9efe9;
+    --paper:#0e1614; --surface:#17221f; --ink:#e9efec; --muted:#94a49d;
+    --line:#26332f; --line-strong:#34433e;
+    --gold:#d8a24f; --gold-soft:#2a2013; --wa:#4bd07f; --wa-bg:#14251a;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 12px 30px -16px rgba(0,0,0,.6);
+  }}
+  :root[data-theme="dark"]{
+    --teal:#46c4b2; --teal-deep:#2fa593; --teal-ink:#d9efe9;
+    --paper:#0e1614; --surface:#17221f; --ink:#e9efec; --muted:#94a49d;
+    --line:#26332f; --line-strong:#34433e; --gold:#d8a24f; --gold-soft:#2a2013;
+    --wa:#4bd07f; --wa-bg:#14251a;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 12px 30px -16px rgba(0,0,0,.6);
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);
+    font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.6;font-size:16px}
+  .wrap{max-width:680px;margin:0 auto;padding:0 20px 80px}
+  header{padding:52px 0 26px;border-bottom:1px solid var(--line)}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;letter-spacing:.16em;
+    text-transform:uppercase;font-weight:700;color:var(--teal-deep)}
+  .eyebrow::before{content:"";width:22px;height:2px;background:var(--gold);border-radius:2px}
+  h1{font-family:Georgia,"Times New Roman",serif;font-weight:600;font-size:clamp(28px,6vw,40px);
+    line-height:1.1;margin:16px 0 10px;letter-spacing:-.01em;text-wrap:balance}
+  .sub{color:var(--muted);font-size:15px;margin:0}
+
+  .insight{margin:28px 0 6px;padding:22px 24px;background:var(--gold-soft);
+    border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:12px}
+  .insight b{color:var(--teal-ink)}
+  .insight p{margin:0 0 10px}.insight p:last-child{margin:0}
+
+  h2{font-family:Georgia,serif;font-size:23px;color:var(--teal-ink);margin:40px 0 4px}
+  .h2note{color:var(--muted);font-size:14px;margin:0 0 8px}
+
+  .msg{background:var(--surface);border:1px solid var(--line);border-radius:14px;
+    padding:18px 20px;margin:16px 0;box-shadow:var(--shadow);position:relative}
+  .msg .day{display:inline-flex;align-items:center;gap:8px;font-family:system-ui,sans-serif;
+    font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);
+    background:var(--wa-bg);padding:4px 11px;border-radius:999px}
+  .msg h3{font-size:15px;margin:12px 0 0;color:var(--muted);font-weight:600}
+  .bubble{margin:12px 0 0;background:var(--wa-bg);border-radius:4px 14px 14px 14px;
+    padding:14px 16px;font-size:15.5px;white-space:pre-line;border:1px solid color-mix(in srgb,var(--wa) 18%,transparent)}
+  .bubble.alt{background:var(--surface);border:1px dashed var(--line-strong)}
+  .lbl{font-family:system-ui,sans-serif;font-size:11.5px;font-weight:700;letter-spacing:.06em;
+    text-transform:uppercase;color:var(--gold);margin:14px 0 0}
+  .fill{color:var(--gold);font-weight:700}
+
+  .ask{margin-top:44px;padding:24px 26px;border-radius:14px;background:var(--teal-deep);color:#eafaf6}
+  .ask h2{color:#fff;margin:0 0 10px;font-size:20px}
+  .ask p{margin:0 0 8px;color:#d6f2ec}
+  .ask b{color:#fff}
+
+  .why{margin-top:40px;border-top:1px solid var(--line);padding-top:22px}
+  .why h2{margin-top:0}
+  .why ul{margin:8px 0 0;padding-left:20px}
+  .why li{margin:8px 0}.why li::marker{color:var(--gold)}
+  footer{margin-top:36px;color:var(--muted);font-size:13px;text-align:center}
+  @media (max-width:480px){.wrap{padding:0 16px 60px}}
+</style>
+
+<div class="wrap">
+  <header>
+    <span class="eyebrow">SurgClub · Estratégia de venda</span>
+    <h1>Sequência pós e-book → Curso</h1>
+    <p class="sub">Como transformar quem baixa o e-book grátis em aluno de curso — repetindo de propósito o que já vendeu.</p>
+  </header>
+
+  <div class="insight">
+    <p><b>O que a semana provou:</b> a venda do Retalho STAR (R$ 1.754) nasceu de um lead do e-book — o Raphael baixou dia 03/09 e comprou dia 09/09, 2 minutos depois de ver o pré-checkout.</p>
+    <p>Ou seja: <b>quem baixa o e-book compra curso completo</b> quando recebe a oferta certa na hora certa. Ele fez isso quase por acaso. A ideia aqui é fazer <b>de propósito, com todo lead</b> — mirando o curso (ticket alto), não a assinatura de R$ 20.</p>
+  </div>
+
+  <h2>Trilha Reconstrução → Retalho STAR</h2>
+  <p class="h2note">Para os leads do e-book "7 Princípios". Troque <span class="fill">[nome]</span> e mande uma mensagem por dia.</p>
+
+  <div class="msg">
+    <span class="day">Dia 0 · entrega</span>
+    <div class="bubble">Olá, [nome]! Aqui é o Bruno 👋
+Seu e-book "Os 7 Princípios da Reconstrução Cutânea" chegou certinho?
+Dá uma atenção especial ao Princípio 7 (o algoritmo de decisão) — é o que mais muda a conduta na prática.</div>
+  </div>
+
+  <div class="msg">
+    <span class="day">Dia 1 · puxar conversa</span>
+    <div class="bubble">[nome], me conta uma coisa: você já faz reconstrução no seu dia a dia, ou é uma área que você quer passar a dominar?
+(a resposta me ajuda a te indicar o melhor caminho)</div>
+  </div>
+
+  <div class="msg">
+    <span class="day">Dia 3 · plantar o curso</span>
+    <div class="bubble">[nome], o e-book te dá o mapa da decisão. Mas quem quer realmente executar os retalhos com segurança, a gente aprofunda tudo isso no curso Retalho STAR — passo a passo dos principais retalhos, com cirurgias reais narradas.
+Foi por ali que muita gente saiu do "eu recuso esse caso" pro "eu resolvo".
+Quer que eu te conte como funciona?</div>
+  </div>
+
+  <div class="msg">
+    <span class="day">Dia 5 · a oferta 🎯</span>
+    <div class="bubble">[nome], montei uma condição especial pra quem veio pelo e-book:
+👉 <span class="fill">[curso Retalho STAR — preço/condição]</span>
+
+É o curso completo de retalhos, com cirurgias reais narradas. Se fizer sentido pro seu momento, te mando o link do checkout agora.</div>
+    <p class="lbl">Este é o ponto que fechou a venda de R$ 1.754 — oferta direta + link do pré-checkout na hora.</p>
+  </div>
+
+  <div class="msg">
+    <span class="day">Dia 7 · última chamada</span>
+    <div class="bubble">[nome], vou encerrar por aqui pra não te encher 🙂
+Se o Retalho STAR fez sentido, esse é o momento: [link].
+E se você prefere acompanhar casos de forma contínua antes de fechar o curso, dá pra entrar no SurgClub e já ver muita coisa por dentro: surgclub.com.br</div>
+  </div>
+
+  <h2>Variação · Trilha Sutura</h2>
+  <p class="h2note">Mesma estrutura, para leads de perfil estudante / iniciante.</p>
+  <div class="msg">
+    <span class="day">Troca só a oferta</span>
+    <div class="bubble alt">No dia 3 e 5, em vez do Retalho STAR, ofereça o curso conforme o nível:
+• SutuStart (base) — <span class="fill">[preço]</span>
+• Suturação (avançado) — <span class="fill">[preço]</span>
+
+No dia 7, a alternativa vira a assinatura SutuClub.</div>
+  </div>
+
+  <div class="ask">
+    <h2>Bruno, só falta você me passar:</h2>
+    <p>➊ Preço / condição do <b>Retalho STAR</b> (pra colocar na oferta do dia 5)</p>
+    <p>➋ Preço do <b>SutuStart</b> e do <b>Suturação</b> (pra fechar a trilha de sutura)</p>
+    <p>Com isso a sequência fica 100% pronta pra rodar.</p>
+  </div>
+
+  <div class="why">
+    <h2>Por que assim</h2>
+    <ul>
+      <li>O dinheiro está no <b>curso</b>, não na assinatura: 1 curso STAR ≈ dezenas de assinaturas de R$ 20.</li>
+      <li>A venda do Raphael provou que lead de e-book compra curso caro — é repetir o padrão de propósito.</li>
+      <li>O <b>pré-checkout</b> foi o gatilho da compra (Raphael e Fabiana) — a oferta do dia 5 tem que levar direto pro link.</li>
+      <li>A assinatura vira a <b>alternativa</b> pra quem não fecha o curso, não a oferta principal.</li>
+    </ul>
+  </div>
+
+  <footer>Cardô · para o SurgClub — uso interno</footer>
+</div>
